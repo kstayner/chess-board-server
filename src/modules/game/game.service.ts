@@ -44,6 +44,7 @@ export class GameService {
       const currentUser = { playerId }
       // Comment
       // other comment
+      // other comment
       const game = await this.gameRepository.findOne(gameId);
       if (!game || !game.isActive) {
         throw new BadRequestException('Game not found or is not active.');
