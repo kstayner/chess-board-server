@@ -7,6 +7,7 @@ import { AuthGuard } from 'src/guards/auth.guard';
 export class GameController {
   constructor(private readonly gameService: GameService) {}
 
+    // comment
   @Post('/api/game/move')
   @UseGuards(AuthGuard)
   async validateAndExecuteMove(@Body() validateMoveDto: ValidateMoveDto) {
