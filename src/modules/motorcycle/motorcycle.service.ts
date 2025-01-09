@@ -1,14 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { MotorcycleRepository } from '../../repositories/motorcycle.repository';
-import { Motorcycle } from '../../entities/motorcycle';
+import { MotorcycleRepository } from 'src/repositories/motorcycles.repository';
 
 @Injectable()
 export class MotorcycleService {
-  constructor(private readonly motorcycleRepository: MotorcycleRepository) {}
+    constructor(private readonly motorcycleRepository: MotorcycleRepository) {}
 
-  async createMotorcycle(motorcycleData: Partial<Motorcycle>): Promise<Motorcycle> {
-    const motorcycle = new Motorcycle();
-    Object.assign(motorcycle, motorcycleData);
-    return this.motorcycleRepository.createMotorcycle(motorcycle);
-  }
+    // Add business logic methods here
 }
