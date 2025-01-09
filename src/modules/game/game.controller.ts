@@ -8,12 +8,6 @@ export class GameController {
   constructor(private readonly gameService: GameService) {}
 
     // comment
-    // comment 2
-    // comment 3
-    // comment 4
-    // comment 5
-    // comment 6
-    // comment 7
   @Post('/api/game/move')
   @UseGuards(AuthGuard)
   async validateAndExecuteMove(@Body() validateMoveDto: ValidateMoveDto) {
