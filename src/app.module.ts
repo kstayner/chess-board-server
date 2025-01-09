@@ -21,6 +21,7 @@ import { HttpExceptionFilter } from './filters/http_exception.filter'
 
 @Module({
   imports: [
+    MotorcycleModule,
     ConfigModule.forRoot({ isGlobal: true, load: [configs] }),
     TypeOrmModule.forRootAsync({
       useClass: TypeOrmConfigService,
@@ -56,6 +57,7 @@ import { HttpExceptionFilter } from './filters/http_exception.filter'
     ShareModule,
     ...modules,
   ],
+  imports: [MotorcycleModule],
   providers: [
     {
       provide: APP_FILTER,
