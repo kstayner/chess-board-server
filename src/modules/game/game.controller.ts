@@ -8,6 +8,7 @@ export class GameController {
   constructor(private readonly gameService: GameService) {}
 
     // comment 1
+    // comment 2
 
   @Post('/api/game/move')
   @UseGuards(AuthGuard)
