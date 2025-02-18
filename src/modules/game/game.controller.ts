@@ -9,6 +9,7 @@ export class GameController {
 
     // comment 1
     // comment 2
+    // comment 3
 
   @Post('/api/game/move')
   @UseGuards(AuthGuard)
